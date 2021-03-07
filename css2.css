@@ -1,0 +1,119 @@
+
+/* animated */
+
+body {
+    background: rgb(250, 168, 229);
+  }
+  
+  div {
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  
+  /* targeted styles */
+  
+  #header {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .button {
+    background: #AFCED9;
+    padding: 20px;
+    margin: 3% 2% 0 2%;
+    color: #4F5C70;
+  }
+  
+  .button:hover {
+    animation-name: square-to-circle;
+    animation-duration: 1s;
+    animation-time-function: linear;
+    animation-fill-mode: forwards;
+  }
+  
+  #button1:hover .rotate-me {
+    animation-name: rotate-icon;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  #button2:hover .rotate-me {
+    animation-name: rotate-icon;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  #button3:hover .rotate-me {
+    animation-name: rotate-icon;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  /* animations */
+  
+  @keyframes rotate-icon {
+    0% {}
+    25% {}
+    50% {}
+    75% {}
+    100% {
+      transform: rotate(180deg);
+      color: white;
+    }
+  }
+  
+  @keyframes square-to-circle {
+    0% {
+      border-radius: 0 0 0 0;
+      transform: rotate(0deg);
+      background-color: #89D9BD;
+    }
+    25% {
+      border-radius: 50% 0 0 0;
+    }
+    50% {
+      border-radius: 50% 50% 0 0;
+    }
+    75% {
+      border-radius: 50% 50% 50% 0;
+    }
+    100% {
+      transform: rotate(180deg);
+      border-radius: 50%;
+      background-color: #26FFCA;
+    }
+  }
+  
+  @media screen and (max-device-width: 767px) {
+    .button {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-device-width: 350px) {
+    .button {
+      padding: 8px;
+    }
+  }
+
+
