@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Nunito:wght@200&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Nunito:wght@200&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+
+
+.MenuWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position:absolute;
+    z-index: 1;
+    overflow-x:hidden ;
+    
+}
+
+    body {
+        background: #fff;
+        font-family: 'Varela Round', sans-serif;
+        overflow-x:hidden;
+    }
+   
+    #sidebarMenu {
+        height: 100%;
+        
+        left: 0;
+        width: 250px;
+        margin-top: 60px;
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out;
+        background: #050505;
+        opacity: 80%;
+    }
+    .sidebarMenuInner{
+        margin:0;
+        padding:0;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .sidebarMenuInner li{
+        list-style: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .sidebarMenuInner li span{
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.50);
+    }
+    .sidebarMenuInner li a{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    input[type="checkbox"]:checked ~ #sidebarMenu {
+        transform: translateX(0);
+    }
+   
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        top: 22px;
+        left: 15px;
+        height: 22px;
+        width: 22px;
+    }
+    .spinner {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  /* .topnav #myLinks {
+    display: none;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    
+    color: white;
+  } */
+
+nav {
+  background: #000;
+  color: #fff;
+  list-style: none;
+  clear: both
+}
+
+nav li{
+  display: inline-block;
+  margin: 0;
+}
+
+.burger div {
+  width: 35px;
+  height:5px;
+  background: #fff;
+  margin: 6px 0;
+}
+
+#burger {
+  float: right;
+  visibility:visible;
+  margin: 5px;
+}
+
+
+
+
+
+
+.nav>a   {
+    background-color:white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    }
+
+.nav a:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+.nav { 
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-family: 'Nunito';
+    font-size: 25px;
+    background-color: black;
+    height: 50px;}
+
+
+/* .main center { 
+ 
+  padding-right: 200px;
+
+  display: flex;
+  justify-content: flex-start;
+ 
+  flex-direction: column;
+  font-family: 'Noto';
+  font-size: 45px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: rgb(0, 0, 0);
+  margin: 0 0 0 0;} */
+
+/* 
+  .lightpic { 
+    
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  
+    color: rgb(0, 0, 0);
+    margin: 0 0 0 0;
+  }  */
+
+.image1 {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    
+   
+
+    }
+    
+    
+.lightsmain {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-left: 8px;
+    flex-wrap: wrap;}
+
+.finallights {
+    margin-top: -40px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/* 
+.justtop {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+} */
+
+.lights {
+
+    display: flex;
+   width: 100%;
+   margin-left: 20px;}
+
+
+h1,h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto';
+    font-size: 85px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: rgb(255, 255, 255);
+    margin: 0 0 0 0;
+    background-image: url('./plant3.jpg');}
+
+p {
+    font-size: 15px;
+    font-family: monospace;
+}
+h3 {
+    margin: 0 0 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto';
+    font-size: 85px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: black;}
+
+.catWrap, .dogWrap, .lowM
+    {
+        padding-left: 200px;
+        padding-right: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Noto';
+    font-size: 45px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: rgb(0, 0, 0);
+    margin: 0 0 0 0;}
+
+img { 
+    
+    width: 400px;
+     height: 400px;
+    padding-left: 5%;
+  padding-right: 5%;}
+
+h4 {margin: 0 0 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto';
+    font-size: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: black;
+
+}
