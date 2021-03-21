@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #000000;
   font-size: 0.875em;
